@@ -3,7 +3,6 @@ C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\bin\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.runtimeconfig.json
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\bin\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.dll
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\bin\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.pdb
-C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.csproj.AssemblyReference.cache
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C____Pizza_Sipariş_Uygulaması.Form1.resources
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C____Pizza_Sipariş_Uygulaması.Properties.Resources.resources
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.csproj.GenerateResource.cache
@@ -17,3 +16,21 @@ C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.genruntimeconfig.cache
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\ref\C# - Pizza Sipariş Uygulaması.dll
 C:\Users\Casper\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C____Pizza_Sipariş_Uygulaması.Form2.resources
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\bin\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.exe
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\bin\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.deps.json
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\bin\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.runtimeconfig.json
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\bin\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.dll
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\bin\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.pdb
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C____Pizza_Sipariş_Uygulaması.Form1.resources
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C____Pizza_Sipariş_Uygulaması.Form2.resources
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C____Pizza_Sipariş_Uygulaması.Properties.Resources.resources
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.csproj.GenerateResource.cache
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.AssemblyInfoInputs.cache
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.AssemblyInfo.cs
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.csproj.CoreCompileInputs.cache
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.dll
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\refint\C# - Pizza Sipariş Uygulaması.dll
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.pdb
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\C# - Pizza Sipariş Uygulaması.genruntimeconfig.cache
+C:\Users\tumse\OneDrive\kod\C# - Pizza Sipariş Uygulaması\C# - Pizza Sipariş Uygulaması\obj\Debug\net6.0-windows\ref\C# - Pizza Sipariş Uygulaması.dll
