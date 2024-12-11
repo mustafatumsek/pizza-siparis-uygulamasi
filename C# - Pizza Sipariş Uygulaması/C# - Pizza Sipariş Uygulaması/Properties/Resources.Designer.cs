@@ -73,6 +73,16 @@ namespace C____Pizza_Sipariş_Uygulaması.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bavyerapizzalogo1 {
+            get {
+                object obj = ResourceManager.GetObject("bavyerapizzalogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diners {
             get {
                 object obj = ResourceManager.GetObject("diners", resourceCulture);
@@ -113,9 +123,59 @@ namespace C____Pizza_Sipariş_Uygulaması.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Leonardo_Diffusion_XL_a_pizza_restourant_named_bavyera_pizza_0 {
+            get {
+                object obj = ResourceManager.GetObject("Leonardo_Diffusion_XL_a_pizza_restourant_named_bavyera_pizza_0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Leonardo_Diffusion_XL_a_pizza_restourant_named_bavyera_pizza_1 {
+            get {
+                object obj = ResourceManager.GetObject("Leonardo_Diffusion_XL_a_pizza_restourant_named_bavyera_pizza_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Leonardo_Diffusion_XL_a_pizza_restourant_named_bavyera_pizza_2 {
+            get {
+                object obj = ResourceManager.GetObject("Leonardo_Diffusion_XL_a_pizza_restourant_named_bavyera_pizza_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Leonardo_Diffusion_XL_a_pizza_restourant_named_bavyera_pizza_3 {
+            get {
+                object obj = ResourceManager.GetObject("Leonardo_Diffusion_XL_a_pizza_restourant_named_bavyera_pizza_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap master2 {
             get {
                 object obj = ResourceManager.GetObject("master2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap turuncu {
+            get {
+                object obj = ResourceManager.GetObject("turuncu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

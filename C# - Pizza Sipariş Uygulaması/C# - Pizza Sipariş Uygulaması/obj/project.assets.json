@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Casper\\OneDrive\\kod\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması.csproj",
+      "projectUniqueName": "C:\\Users\\Casper\\OneDrive - Pamukkale University\\kod\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması.csproj",
       "projectName": "C# - Pizza Sipariş Uygulaması",
-      "projectPath": "C:\\Users\\Casper\\OneDrive\\kod\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması.csproj",
+      "projectPath": "C:\\Users\\Casper\\OneDrive - Pamukkale University\\kod\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması.csproj",
       "packagesPath": "C:\\Users\\Casper\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Casper\\OneDrive\\kod\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması\\obj\\",
+      "outputPath": "C:\\Users\\Casper\\OneDrive - Pamukkale University\\kod\\C# - Pizza Sipariş Uygulaması\\C# - Pizza Sipariş Uygulaması\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
