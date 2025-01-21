@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(anaMenu));
-            listBox1 = new ListBox();
+            lbListe = new ListBox();
             cmbHamur = new ComboBox();
             cmbSucuk = new ComboBox();
             cmbMantar = new ComboBox();
@@ -42,30 +42,30 @@
             cmbSos2 = new ComboBox();
             cmbCıtır = new ComboBox();
             cmbTatlı = new ComboBox();
-            label2 = new Label();
+            lblAdSoyad = new Label();
             txtIsimSoyisim = new TextBox();
             txtTelefon = new TextBox();
-            label3 = new Label();
+            lblTelefon = new Label();
             txtAdres = new TextBox();
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
+            lblBoyut = new Label();
+            lblHamur = new Label();
+            lblSucuk = new Label();
+            lblMantar = new Label();
+            lblPeynir = new Label();
+            lblZeytin = new Label();
+            lblTatli = new Label();
+            lblCitir = new Label();
+            lblSos2 = new Label();
+            lblIcecek1 = new Label();
             picLogo = new PictureBox();
             cbTemassız = new CheckBox();
             gbTeslimat = new GroupBox();
-            cbKapıda = new CheckBox();
-            label4 = new Label();
+            cbKapida = new CheckBox();
+            lblAdres = new Label();
             btnSiparis = new Button();
             btnTemizle = new Button();
-            label1 = new Label();
-            label15 = new Label();
+            lblIcecek2 = new Label();
+            lblSos1 = new Label();
             cmbİcecek2 = new ComboBox();
             cmbSos1 = new ComboBox();
             menuStrip1 = new MenuStrip();
@@ -81,23 +81,21 @@
             seçimleriTemizleToolStripMenuItem1 = new ToolStripMenuItem();
             btnIndirimKodu = new Button();
             txtIndirimKodu = new TextBox();
-            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             gbTeslimat.SuspendLayout();
             menuStrip1.SuspendLayout();
             contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // listBox1
+            // lbListe
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(440, 184);
-            listBox1.Margin = new Padding(3, 4, 3, 4);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(249, 424);
-            listBox1.TabIndex = 0;
+            lbListe.FormattingEnabled = true;
+            lbListe.ItemHeight = 20;
+            lbListe.Location = new Point(440, 184);
+            lbListe.Margin = new Padding(3, 4, 3, 4);
+            lbListe.Name = "lbListe";
+            lbListe.Size = new Size(249, 424);
+            lbListe.TabIndex = 0;
             // 
             // cmbHamur
             // 
@@ -231,15 +229,15 @@
             cmbTatlı.TabIndex = 7;
             cmbTatlı.SelectedIndexChanged += comboBox10_SelectedIndexChanged;
             // 
-            // label2
+            // lblAdSoyad
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(30, 35);
-            label2.Name = "label2";
-            label2.Size = new Size(126, 23);
-            label2.TabIndex = 13;
-            label2.Text = "İsim Soyisim:";
+            lblAdSoyad.AutoSize = true;
+            lblAdSoyad.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAdSoyad.Location = new Point(30, 35);
+            lblAdSoyad.Name = "lblAdSoyad";
+            lblAdSoyad.Size = new Size(126, 23);
+            lblAdSoyad.TabIndex = 13;
+            lblAdSoyad.Text = "İsim Soyisim:";
             // 
             // txtIsimSoyisim
             // 
@@ -261,16 +259,16 @@
             txtTelefon.TabIndex = 16;
             txtTelefon.KeyPress += textBox2_KeyPress;
             // 
-            // label3
+            // lblTelefon
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(73, 107);
-            label3.Name = "label3";
-            label3.Size = new Size(79, 23);
-            label3.TabIndex = 15;
-            label3.Text = "Telefon:";
-            label3.TextAlign = ContentAlignment.TopRight;
+            lblTelefon.AutoSize = true;
+            lblTelefon.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTelefon.Location = new Point(73, 107);
+            lblTelefon.Name = "lblTelefon";
+            lblTelefon.Size = new Size(79, 23);
+            lblTelefon.TabIndex = 15;
+            lblTelefon.Text = "Telefon:";
+            lblTelefon.TextAlign = ContentAlignment.TopRight;
             // 
             // txtAdres
             // 
@@ -282,105 +280,105 @@
             txtAdres.Size = new Size(197, 137);
             txtAdres.TabIndex = 18;
             // 
-            // label5
+            // lblBoyut
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.Location = new Point(25, 183);
-            label5.Name = "label5";
-            label5.Size = new Size(122, 23);
-            label5.TabIndex = 19;
-            label5.Text = "Pizza Boyutu";
+            lblBoyut.AutoSize = true;
+            lblBoyut.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblBoyut.Location = new Point(25, 183);
+            lblBoyut.Name = "lblBoyut";
+            lblBoyut.Size = new Size(122, 23);
+            lblBoyut.TabIndex = 19;
+            lblBoyut.Text = "Pizza Boyutu";
             // 
-            // label6
+            // lblHamur
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(25, 256);
-            label6.Name = "label6";
-            label6.Size = new Size(129, 23);
-            label6.TabIndex = 20;
-            label6.Text = "Pizza Hamuru";
+            lblHamur.AutoSize = true;
+            lblHamur.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblHamur.Location = new Point(25, 256);
+            lblHamur.Name = "lblHamur";
+            lblHamur.Size = new Size(129, 23);
+            lblHamur.TabIndex = 20;
+            lblHamur.Text = "Pizza Hamuru";
             // 
-            // label7
+            // lblSucuk
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.Location = new Point(25, 327);
-            label7.Name = "label7";
-            label7.Size = new Size(63, 23);
-            label7.TabIndex = 21;
-            label7.Text = "Sucuk";
+            lblSucuk.AutoSize = true;
+            lblSucuk.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSucuk.Location = new Point(25, 327);
+            lblSucuk.Name = "lblSucuk";
+            lblSucuk.Size = new Size(63, 23);
+            lblSucuk.TabIndex = 21;
+            lblSucuk.Text = "Sucuk";
             // 
-            // label8
+            // lblMantar
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(25, 397);
-            label8.Name = "label8";
-            label8.Size = new Size(72, 23);
-            label8.TabIndex = 22;
-            label8.Text = "Mantar";
+            lblMantar.AutoSize = true;
+            lblMantar.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblMantar.Location = new Point(25, 397);
+            lblMantar.Name = "lblMantar";
+            lblMantar.Size = new Size(72, 23);
+            lblMantar.TabIndex = 22;
+            lblMantar.Text = "Mantar";
             // 
-            // label9
+            // lblPeynir
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label9.Location = new Point(25, 473);
-            label9.Name = "label9";
-            label9.Size = new Size(65, 23);
-            label9.TabIndex = 23;
-            label9.Text = "Peynir";
+            lblPeynir.AutoSize = true;
+            lblPeynir.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPeynir.Location = new Point(25, 473);
+            lblPeynir.Name = "lblPeynir";
+            lblPeynir.Size = new Size(65, 23);
+            lblPeynir.TabIndex = 23;
+            lblPeynir.Text = "Peynir";
             // 
-            // label10
+            // lblZeytin
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.Location = new Point(25, 549);
-            label10.Name = "label10";
-            label10.Size = new Size(63, 23);
-            label10.TabIndex = 24;
-            label10.Text = "Zeytin";
+            lblZeytin.AutoSize = true;
+            lblZeytin.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblZeytin.Location = new Point(25, 549);
+            lblZeytin.Name = "lblZeytin";
+            lblZeytin.Size = new Size(63, 23);
+            lblZeytin.TabIndex = 24;
+            lblZeytin.Text = "Zeytin";
             // 
-            // label11
+            // lblTatli
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(224, 183);
-            label11.Name = "label11";
-            label11.Size = new Size(152, 23);
-            label11.TabIndex = 25;
-            label11.Text = "Tatlı Promosyon";
+            lblTatli.AutoSize = true;
+            lblTatli.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTatli.Location = new Point(224, 183);
+            lblTatli.Name = "lblTatli";
+            lblTatli.Size = new Size(152, 23);
+            lblTatli.TabIndex = 25;
+            lblTatli.Text = "Tatlı Promosyon";
             // 
-            // label12
+            // lblCitir
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(224, 253);
-            label12.Name = "label12";
-            label12.Size = new Size(154, 23);
-            label12.TabIndex = 26;
-            label12.Text = "Çıtır Promosyon";
+            lblCitir.AutoSize = true;
+            lblCitir.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCitir.Location = new Point(224, 253);
+            lblCitir.Name = "lblCitir";
+            lblCitir.Size = new Size(154, 23);
+            lblCitir.TabIndex = 26;
+            lblCitir.Text = "Çıtır Promosyon";
             // 
-            // label13
+            // lblSos2
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(224, 397);
-            label13.Name = "label13";
-            label13.Size = new Size(94, 23);
-            label13.TabIndex = 27;
-            label13.Text = "İkinci Sos";
+            lblSos2.AutoSize = true;
+            lblSos2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSos2.Location = new Point(224, 397);
+            lblSos2.Name = "lblSos2";
+            lblSos2.Size = new Size(94, 23);
+            lblSos2.TabIndex = 27;
+            lblSos2.Text = "İkinci Sos";
             // 
-            // label14
+            // lblIcecek1
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(224, 473);
-            label14.Name = "label14";
-            label14.Size = new Size(126, 23);
-            label14.TabIndex = 28;
-            label14.Text = "Birinci İçecek";
+            lblIcecek1.AutoSize = true;
+            lblIcecek1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblIcecek1.Location = new Point(224, 473);
+            lblIcecek1.Name = "lblIcecek1";
+            lblIcecek1.Size = new Size(126, 23);
+            lblIcecek1.TabIndex = 28;
+            lblIcecek1.Text = "Birinci İçecek";
             // 
             // picLogo
             // 
@@ -409,14 +407,14 @@
             // 
             // gbTeslimat
             // 
-            gbTeslimat.Controls.Add(cbKapıda);
+            gbTeslimat.Controls.Add(cbKapida);
             gbTeslimat.Controls.Add(txtAdres);
             gbTeslimat.Controls.Add(cbTemassız);
-            gbTeslimat.Controls.Add(label2);
+            gbTeslimat.Controls.Add(lblAdSoyad);
             gbTeslimat.Controls.Add(txtIsimSoyisim);
-            gbTeslimat.Controls.Add(label3);
+            gbTeslimat.Controls.Add(lblTelefon);
             gbTeslimat.Controls.Add(txtTelefon);
-            gbTeslimat.Controls.Add(label4);
+            gbTeslimat.Controls.Add(lblAdres);
             gbTeslimat.Location = new Point(744, 183);
             gbTeslimat.Margin = new Padding(3, 4, 3, 4);
             gbTeslimat.Name = "gbTeslimat";
@@ -427,29 +425,29 @@
             gbTeslimat.Text = "Teslimat Bilgileri";
             gbTeslimat.Visible = false;
             // 
-            // cbKapıda
+            // cbKapida
             // 
-            cbKapıda.AutoSize = true;
-            cbKapıda.Cursor = Cursors.Hand;
-            cbKapıda.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            cbKapıda.Location = new Point(174, 384);
-            cbKapıda.Margin = new Padding(3, 4, 3, 4);
-            cbKapıda.Name = "cbKapıda";
-            cbKapıda.Size = new Size(195, 21);
-            cbKapıda.TabIndex = 31;
-            cbKapıda.Text = "Ödemeyi kapıda yapacağım.";
-            cbKapıda.UseVisualStyleBackColor = true;
-            cbKapıda.CheckedChanged += checkBox2_CheckedChanged;
+            cbKapida.AutoSize = true;
+            cbKapida.Cursor = Cursors.Hand;
+            cbKapida.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            cbKapida.Location = new Point(174, 384);
+            cbKapida.Margin = new Padding(3, 4, 3, 4);
+            cbKapida.Name = "cbKapida";
+            cbKapida.Size = new Size(195, 21);
+            cbKapida.TabIndex = 31;
+            cbKapida.Text = "Ödemeyi kapıda yapacağım.";
+            cbKapida.UseVisualStyleBackColor = true;
+            cbKapida.CheckedChanged += checkBox2_CheckedChanged;
             // 
-            // label4
+            // lblAdres
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(85, 183);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 23);
-            label4.TabIndex = 17;
-            label4.Text = "Adres:";
+            lblAdres.AutoSize = true;
+            lblAdres.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAdres.Location = new Point(85, 183);
+            lblAdres.Name = "lblAdres";
+            lblAdres.Size = new Size(68, 23);
+            lblAdres.TabIndex = 17;
+            lblAdres.Text = "Adres:";
             // 
             // btnSiparis
             // 
@@ -475,25 +473,25 @@
             btnTemizle.UseVisualStyleBackColor = true;
             btnTemizle.Click += button3_Click;
             // 
-            // label1
+            // lblIcecek2
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(225, 549);
-            label1.Name = "label1";
-            label1.Size = new Size(118, 23);
-            label1.TabIndex = 38;
-            label1.Text = "İkinci İçecek";
+            lblIcecek2.AutoSize = true;
+            lblIcecek2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblIcecek2.Location = new Point(225, 549);
+            lblIcecek2.Name = "lblIcecek2";
+            lblIcecek2.Size = new Size(118, 23);
+            lblIcecek2.TabIndex = 38;
+            lblIcecek2.Text = "İkinci İçecek";
             // 
-            // label15
+            // lblSos1
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.Location = new Point(224, 327);
-            label15.Name = "label15";
-            label15.Size = new Size(102, 23);
-            label15.TabIndex = 37;
-            label15.Text = "Birinci Sos";
+            lblSos1.AutoSize = true;
+            lblSos1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSos1.Location = new Point(224, 327);
+            lblSos1.Name = "lblSos1";
+            lblSos1.Size = new Size(102, 23);
+            lblSos1.TabIndex = 37;
+            lblSos1.Text = "Birinci Sos";
             // 
             // cmbİcecek2
             // 
@@ -619,18 +617,6 @@
             txtIndirimKodu.TabIndex = 41;
             txtIndirimKodu.Visible = false;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(0, 13);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1128, 1000);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 42;
-            pictureBox1.TabStop = false;
-            pictureBox1.Visible = false;
-            // 
             // anaMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -638,28 +624,27 @@
             BackColor = Color.SandyBrown;
             ClientSize = new Size(1128, 760);
             ContextMenuStrip = contextMenuStrip1;
-            Controls.Add(pictureBox1);
             Controls.Add(txtIndirimKodu);
             Controls.Add(btnIndirimKodu);
-            Controls.Add(label1);
-            Controls.Add(label15);
+            Controls.Add(lblIcecek2);
+            Controls.Add(lblSos1);
             Controls.Add(cmbİcecek2);
             Controls.Add(cmbSos1);
-            Controls.Add(listBox1);
+            Controls.Add(lbListe);
             Controls.Add(btnTemizle);
             Controls.Add(btnSiparis);
             Controls.Add(gbTeslimat);
             Controls.Add(picLogo);
-            Controls.Add(label14);
-            Controls.Add(label13);
-            Controls.Add(label12);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label6);
-            Controls.Add(label5);
+            Controls.Add(lblIcecek1);
+            Controls.Add(lblSos2);
+            Controls.Add(lblCitir);
+            Controls.Add(lblTatli);
+            Controls.Add(lblZeytin);
+            Controls.Add(lblPeynir);
+            Controls.Add(lblMantar);
+            Controls.Add(lblSucuk);
+            Controls.Add(lblHamur);
+            Controls.Add(lblBoyut);
             Controls.Add(cmbBoyut);
             Controls.Add(cmbİcecek1);
             Controls.Add(cmbSos2);
@@ -685,14 +670,13 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private ListBox listBox1;
+        private ListBox lbListe;
         private ComboBox cmbHamur;
         private ComboBox cmbSucuk;
         private ComboBox cmbMantar;
@@ -704,30 +688,30 @@
         private ComboBox cmbSos2;
         private ComboBox cmbCıtır;
         private ComboBox cmbTatlı;
-        private Label label2;
+        private Label lblAdSoyad;
         private TextBox txtIsimSoyisim;
         private TextBox txtTelefon;
-        private Label label3;
+        private Label lblTelefon;
         private TextBox txtAdres;
-        private Label label5;
-        private Label label6;
-        private Label label7;
-        private Label label8;
-        private Label label9;
-        private Label label10;
-        private Label label11;
-        private Label label12;
-        private Label label13;
-        private Label label14;
+        private Label lblBoyut;
+        private Label lblHamur;
+        private Label lblSucuk;
+        private Label lblMantar;
+        private Label lblPeynir;
+        private Label lblZeytin;
+        private Label lblTatli;
+        private Label lblCitir;
+        private Label lblSos2;
+        private Label lblIcecek1;
         private PictureBox picLogo;
         private CheckBox cbTemassız;
         private GroupBox gbTeslimat;
         private Button btnSiparis;
         private Button btnTemizle;
-        private Label label4;
-        private CheckBox cbKapıda;
-        private Label label1;
-        private Label label15;
+        private Label lblAdres;
+        private CheckBox cbKapida;
+        private Label lblIcecek2;
+        private Label lblSos1;
         private ComboBox cmbİcecek2;
         private ComboBox cmbSos1;
         private MenuStrip menuStrip1;
@@ -743,6 +727,5 @@
         private ToolStripMenuItem kullanımKoşullarıToolStripMenuItem;
         private Button btnIndirimKodu;
         private TextBox txtIndirimKodu;
-        private PictureBox pictureBox1;
     }
 }

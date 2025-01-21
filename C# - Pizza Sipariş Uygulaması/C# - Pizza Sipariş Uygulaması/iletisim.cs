@@ -20,7 +20,7 @@ namespace C____Pizza_Sipariş_Uygulaması
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void picKonum_Click(object sender, EventArgs e)
         {
             string url = "www.google.com/maps/@39.7786895,30.5154271,19.75z?entry=ttu;";
             try
@@ -49,18 +49,18 @@ namespace C____Pizza_Sipariş_Uygulaması
             }
         }
 
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtAd_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                 && !char.IsSeparator(e.KeyChar);
         }
-        private void textBox2_KeyPress_1(object sender, KeyPressEventArgs e)
+        private void txtSoyad_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                     && !char.IsSeparator(e.KeyChar);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnGonder_Click(object sender, EventArgs e)
         {
             if (txtAd.Text.Length == 0 || txtEposta.Text.Length == 0 || txtMesaj.Text.Length == 0) { MessageBox.Show("'*' ile belirtilen alanların doldurulması zorunludur.", "Uyarı"); }
             else
@@ -73,7 +73,7 @@ namespace C____Pizza_Sipariş_Uygulaması
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lblWeb_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //System.Diagnostics.Process.Start("www.bavyerapizza.com;");
             string url = "www.bavyerapizza.com";
@@ -103,13 +103,13 @@ namespace C____Pizza_Sipariş_Uygulaması
             }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lblAdres_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(lblAdres.Text);
             MessageBox.Show("Adres kopyalandı.", "Adres");
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void lblTelefon_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(lblTelefon.Text);
             MessageBox.Show("Telefon numarası kopyalandı.", "Telefon");

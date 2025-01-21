@@ -21,16 +21,16 @@ namespace C____Pizza_Sipariş_Uygulaması
         public int a = 0;                   //combobox sayacı
         public int c1 = 1;                  //combobox değiştirildiğinde ayarın değişmemesini sağlıyor
         public int c2 = 1;                  //combobox değiştirildiğinde ayarın değişmemesini sağlıyor
-        public static int zzz = 0;          //form kapatıldığında form1 in yenilenmesini sağlıyor
-        public string skt1;                 //son kullanma tarihindeki ayın kartta yazmasını sağlıyor
-        public string skt2;                 //son kullanma tarihindeki yılın kartta yazmasını sağlıyor
+        public static int formYenile = 0;          //form kapatıldığında form1 in yenilenmesini sağlıyor
+        public string kartSktAy;                 //son kullanma tarihindeki ayın kartta yazmasını sağlıyor
+        public string kartSktYil;                 //son kullanma tarihindeki yılın kartta yazmasını sağlıyor
         public int cvv;                     //cvv kodunun kartta yazmasını sağlıyor
         public static int sifre;            //sms kodu
         public static int sayac = 0;        //sms kodunun yanlış giriş sayısını sayan sayaç
 
 
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void odeme_Load(object sender, EventArgs e)
         {
             txtSms.Text = "CVV Kodu";
             lblOtoIsim.Text = anaMenu.isim;       //karttaki isim bölümüne form1de girilen ismi yazdırıyor
@@ -39,10 +39,10 @@ namespace C____Pizza_Sipariş_Uygulaması
                 if (MessageBox.Show("Önceden girilmiş kart bilginiz bulunmaktadır. Sizin için doldurmamızı ister misiniz?", "Onayla", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //kullanıcı evet seçeneğini seçerse
-                    txtKartNo.Text = anaMenu.kartno.ToString();
-                    txtCvv.Text = anaMenu.cvvno.ToString();
-                    cmbSktAy.SelectedIndex = anaMenu.sktgun;
-                    cmbSktYil.SelectedIndex = anaMenu.sktay;
+                    txtKartNo.Text = anaMenu.kartNo.ToString();
+                    txtCvv.Text = anaMenu.cvvNo.ToString();
+                    cmbSktAy.SelectedIndex = anaMenu.sktGun;
+                    cmbSktYil.SelectedIndex = anaMenu.sktAy;
                 }
                 else
                 {
@@ -51,26 +51,26 @@ namespace C____Pizza_Sipariş_Uygulaması
                 }
             }
         }
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)                  //sadece sayı girilmesini sağlıyor
+        private void txtKartNo_KeyPress(object sender, KeyPressEventArgs e)                  //sadece sayı girilmesini sağlıyor
         {
             anaMenu.check = 0;
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)                  //sadece sayı girilmesini sağlıyor     
+        private void txtCvv_KeyPress(object sender, KeyPressEventArgs e)                  //sadece sayı girilmesini sağlıyor     
         {
             anaMenu.check = 0;
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)                  //sadece sayı girilmesini sağlıyor
+        private void txtSms_KeyPress(object sender, KeyPressEventArgs e)                  //sadece sayı girilmesini sağlıyor
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
         private void button1_Click(object sender, EventArgs e)                              //kaydet butonuna basıldığında
         {
-            if (label10.Text == "invalid")          //kart geçersiz ise
+            if (lblKartCheck.Text == "invalid")          //kart geçersiz ise
             { MessageBox.Show("Girmiş olduğunuz kart numarası geçersizdir. Lütfen kontrol ediniz."); }
             else if (txtKartNo.Text.Length != 16)    //kart no 16 haneli değilse
             { MessageBox.Show("Lütfen 16 haneli kart numaranızı eksiksiz giriniz.", "Uyarı"); }
@@ -95,7 +95,7 @@ namespace C____Pizza_Sipariş_Uygulaması
             }
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbSktAy_SelectedIndexChanged(object sender, EventArgs e)
         {
             while (c1 == 1)                                                     //sadece ilk değişimde değişmesini sağlıyor
             {
@@ -107,23 +107,23 @@ namespace C____Pizza_Sipariş_Uygulaması
                 btnOnayla.Enabled = true;
             }
 
-            if (cmbSktAy.SelectedIndex == 0) { skt1 = "01"; }                  //karttaki skt bölümü için tanımlamalar
-            else if (cmbSktAy.SelectedIndex == 1) { skt1 = "02"; }
-            else if (cmbSktAy.SelectedIndex == 2) { skt1 = "03"; }
-            else if (cmbSktAy.SelectedIndex == 3) { skt1 = "04"; }
-            else if (cmbSktAy.SelectedIndex == 4) { skt1 = "05"; }
-            else if (cmbSktAy.SelectedIndex == 5) { skt1 = "06"; }
-            else if (cmbSktAy.SelectedIndex == 6) { skt1 = "07"; }
-            else if (cmbSktAy.SelectedIndex == 7) { skt1 = "08"; }
-            else if (cmbSktAy.SelectedIndex == 8) { skt1 = "09"; }
-            else if (cmbSktAy.SelectedIndex == 9) { skt1 = "10"; }
-            else if (cmbSktAy.SelectedIndex == 10) { skt1 = "11"; }
-            else if (cmbSktAy.SelectedIndex == 11) { skt1 = "12"; }
-            label6.Text = skt1;                                                 //karttaki skt kısmına ayı yazdırıyor
-            label8.Text = skt2;                                                 //karttaki skt kısmına yılı yazdırıyor
+            if (cmbSktAy.SelectedIndex == 0) { kartSktAy = "01"; }                  //karttaki skt bölümü için tanımlamalar
+            else if (cmbSktAy.SelectedIndex == 1) { kartSktAy = "02"; }
+            else if (cmbSktAy.SelectedIndex == 2) { kartSktAy = "03"; }
+            else if (cmbSktAy.SelectedIndex == 3) { kartSktAy = "04"; }
+            else if (cmbSktAy.SelectedIndex == 4) { kartSktAy = "05"; }
+            else if (cmbSktAy.SelectedIndex == 5) { kartSktAy = "06"; }
+            else if (cmbSktAy.SelectedIndex == 6) { kartSktAy = "07"; }
+            else if (cmbSktAy.SelectedIndex == 7) { kartSktAy = "08"; }
+            else if (cmbSktAy.SelectedIndex == 8) { kartSktAy = "09"; }
+            else if (cmbSktAy.SelectedIndex == 9) { kartSktAy = "10"; }
+            else if (cmbSktAy.SelectedIndex == 10) { kartSktAy = "11"; }
+            else if (cmbSktAy.SelectedIndex == 11) { kartSktAy = "12"; }
+            label6.Text = kartSktAy;                                                 //karttaki skt kısmına ayı yazdırıyor
+            label8.Text = kartSktYil;                                                 //karttaki skt kısmına yılı yazdırıyor
         }
 
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmbSktYil_SelectedIndexChanged(object sender, EventArgs e)
         {
             while (c2 == 1)                                                     //sadece ilk değişimde değişmesini sağlıyor
             {
@@ -135,37 +135,37 @@ namespace C____Pizza_Sipariş_Uygulaması
                 btnOnayla.Enabled = true;
             }
 
-            if (cmbSktYil.SelectedIndex == 0) { skt2 = "24"; }                  //karttaki skt bölümü için tanımlamalar
-            else if (cmbSktYil.SelectedIndex == 1) { skt2 = "25"; }
-            else if (cmbSktYil.SelectedIndex == 2) { skt2 = "26"; }
-            else if (cmbSktYil.SelectedIndex == 3) { skt2 = "27"; }
-            else if (cmbSktYil.SelectedIndex == 4) { skt2 = "28"; }
-            else if (cmbSktYil.SelectedIndex == 5) { skt2 = "29"; }
-            else if (cmbSktYil.SelectedIndex == 6) { skt2 = "30"; }
-            else if (cmbSktYil.SelectedIndex == 7) { skt2 = "31"; }
-            else if (cmbSktYil.SelectedIndex == 8) { skt2 = "32"; }
-            else if (cmbSktYil.SelectedIndex == 9) { skt2 = "33"; }
-            else if (cmbSktYil.SelectedIndex == 10) { skt2 = "34"; }
-            label6.Text = skt1;                                                 //karttaki skt kısmına ayı yazdırıyor
-            label8.Text = skt2;                                                 //karttaki skt kısmına yılı yazdırıyor
+            if (cmbSktYil.SelectedIndex == 0) { kartSktYil = "24"; }                  //karttaki skt bölümü için tanımlamalar
+            else if (cmbSktYil.SelectedIndex == 1) { kartSktYil = "25"; }
+            else if (cmbSktYil.SelectedIndex == 2) { kartSktYil = "26"; }
+            else if (cmbSktYil.SelectedIndex == 3) { kartSktYil = "27"; }
+            else if (cmbSktYil.SelectedIndex == 4) { kartSktYil = "28"; }
+            else if (cmbSktYil.SelectedIndex == 5) { kartSktYil = "29"; }
+            else if (cmbSktYil.SelectedIndex == 6) { kartSktYil = "30"; }
+            else if (cmbSktYil.SelectedIndex == 7) { kartSktYil = "31"; }
+            else if (cmbSktYil.SelectedIndex == 8) { kartSktYil = "32"; }
+            else if (cmbSktYil.SelectedIndex == 9) { kartSktYil = "33"; }
+            else if (cmbSktYil.SelectedIndex == 10) { kartSktYil = "34"; }
+            label6.Text = kartSktAy;                                                 //karttaki skt kısmına ayı yazdırıyor
+            label8.Text = kartSktYil;                                                 //karttaki skt kısmına yılı yazdırıyor
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)                  //bilgilerirme kutucukları
+        private void picKartHelp_Click(object sender, EventArgs e)                  //bilgilerirme kutucukları
         {
             MessageBox.Show("Kartınızın ön yüzünde yer alan 16 haneli numaradır.", "Kart Numarası");
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void picSktHelp_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Kartınızın ön yüzünde yer alan gün/ay şeklinde yazılmış 2 haneli numaralardır.", "Son Kullanım Tarihi");
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void picCvvHelp_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Kartınızın arka yüzünde yer alan 3 haneli numaradır.", "CVV");
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void picSmsHelp_Click(object sender, EventArgs e)
         {
             if (btnSiparis.Enabled == true) MessageBox.Show("Telefonunuza B003 kodu ile gelmiş olan 4 haneli size özel oluşturulmuş koddur.", "SMS Kodu");
             else MessageBox.Show("Kart bilgilerinizi doğru girdiğiniz takdirde 'Kartı Onayla' butonuna bastığınızda telefonunuza B003 kodu ile gelecek olan 4 haneli size özel oluşturulmuş koddur.", "SMS Kodu");
@@ -180,7 +180,7 @@ namespace C____Pizza_Sipariş_Uygulaması
                 if (sayac == 3)         //güvenlik sebebiyle siparişi iptal ediyor
                 {
                     MessageBox.Show("3 kez yanlış kod girdiğiniz için siparişiniz iptal olmuştur. Lütfen tekrar deneyiniz.", "Uyarı");
-                    zzz += 1;
+                    formYenile += 1;
                     this.Close();
                     sayac = 0;
                 }
@@ -191,17 +191,17 @@ namespace C____Pizza_Sipariş_Uygulaması
             {
                 if (cbKartiKaydet.Checked == true)
                 {
-                    anaMenu.kartno = Convert.ToInt64(txtKartNo.Text);
-                    anaMenu.cvvno = cvv;
-                    anaMenu.sktgun = cmbSktAy.SelectedIndex;
-                    anaMenu.sktay = cmbSktYil.SelectedIndex;
+                    anaMenu.kartNo = Convert.ToInt64(txtKartNo.Text);
+                    anaMenu.cvvNo = cvv;
+                    anaMenu.sktGun = cmbSktAy.SelectedIndex;
+                    anaMenu.sktAy = cmbSktYil.SelectedIndex;
                     anaMenu.check = 1;
                 }
                 if (anaMenu.a % 2 == 0)
                 { MessageBox.Show("Siparişiniz onaylanmıştır. En kısa sürede Temasasız teslimat ile adresinize gönderilecektir. Teşekkür ederiz.", "Onaylandı"); }
                 else
                 { MessageBox.Show("Siparişiniz onaylanmıştır. En kısa sürede teslim edilecektir. Teşekkür ederiz.", "Onaylandı"); }
-                zzz += 1;
+                formYenile += 1;
                 this.Close();
                 sayac = 0;
             }
@@ -211,7 +211,7 @@ namespace C____Pizza_Sipariş_Uygulaması
                 if (sayac == 3)         //güvenlik sebebiyle siparişi iptal ediyor
                 {
                     MessageBox.Show("3 kez yanlış kod girdiğiniz için siparişiniz iptal olmuştur. Lütfen tekrar deneyiniz.", "Uyarı");
-                    zzz += 1;
+                    formYenile += 1;
                     this.Close();
                     sayac = 0;
                 }
@@ -222,19 +222,19 @@ namespace C____Pizza_Sipariş_Uygulaması
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void txtKartNo_TextChanged(object sender, EventArgs e)
         {
             txtOtoKartNo.Text = txtKartNo.Text;                         //kart görseline yazdırıyor
             if (txtKartNo.Text.Length == 16)
             {
-                label10.Text = KrediKartiniBulma(txtKartNo.Text);         //sağlayıcıyı bulma fonksiyonunu çağırıp labela yazdırıyor
+                lblKartCheck.Text = KrediKartiniBulma(txtKartNo.Text);         //sağlayıcıyı bulma fonksiyonunu çağırıp labela yazdırıyor
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void txtCvv_TextChanged(object sender, EventArgs e)
         {
             cvv = int.Parse(txtCvv.Text);                             //cvvyi kart görseline yazdırıyor
-            label9.Text = cvv.ToString();
+            lblKartCvv.Text = cvv.ToString();
         }
         public static string KrediKartiniBulma(string KrediKartiNo)     //kart sağlayıcısını bulma fonskiyonu
         {
@@ -280,51 +280,51 @@ namespace C____Pizza_Sipariş_Uygulaması
                 return "invalid";
         }
 
-        private void label10_TextChanged(object sender, EventArgs e)            //kart doğrulama fonksiyonu çalıştığında
+        private void lblKartCheck_TextChanged(object sender, EventArgs e)            //kart doğrulama fonksiyonu çalıştığında
         {
-            if (label10.Text == "MASTER")
+            if (lblKartCheck.Text == "MASTER")
             {
                 picService.Image = Resources.master2;
                 txtCvv.Enabled = true;
                 cmbSktAy.Enabled = true;
                 cmbSktYil.Enabled = true;
             }
-            if (label10.Text == "VISA")
+            if (lblKartCheck.Text == "VISA")
             {
                 picService.Image = Resources.visa;
                 txtCvv.Enabled = true;
                 cmbSktAy.Enabled = true;
                 cmbSktYil.Enabled = true;
             }
-            if (label10.Text == "AEXPRESS")
+            if (lblKartCheck.Text == "AEXPRESS")
             {
                 picService.Image = Resources.amex;
                 txtCvv.Enabled = true;
                 cmbSktAy.Enabled = true;
                 cmbSktYil.Enabled = true;
             }
-            if (label10.Text == "DINERS")
+            if (lblKartCheck.Text == "DINERS")
             {
                 picService.Image = Resources.diners;
                 txtCvv.Enabled = true;
                 cmbSktAy.Enabled = true;
                 cmbSktYil.Enabled = true;
             }
-            if (label10.Text == "DISCOVERS")
+            if (lblKartCheck.Text == "DISCOVERS")
             {
                 picService.Image = Resources.discover;
                 txtCvv.Enabled = true;
                 cmbSktAy.Enabled = true;
                 cmbSktYil.Enabled = true;
             }
-            if (label10.Text == "JCB")
+            if (lblKartCheck.Text == "JCB")
             {
                 picService.Image = Resources.JCB;
                 txtCvv.Enabled = true;
                 cmbSktAy.Enabled = true;
                 cmbSktYil.Enabled = true;
             }
-            if (label10.Text == "invalid")                              //kart geçersiz ise diğer bilgiler girilemiyor
+            if (lblKartCheck.Text == "invalid")                              //kart geçersiz ise diğer bilgiler girilemiyor
             {
                 picService.Image = Resources.gecersiz;
                 txtCvv.Enabled = false;
@@ -333,19 +333,19 @@ namespace C____Pizza_Sipariş_Uygulaması
             }
 
         }
-        private void comboBox1_DropDownClosed(object sender, EventArgs e)       //kart bilgileri otomatik doldurulduktan sonra değişiklik yapılırsa tekrar kaydedilsin mi diye sorması için
+        private void cmbSktAy_DropDownClosed(object sender, EventArgs e)       //kart bilgileri otomatik doldurulduktan sonra değişiklik yapılırsa tekrar kaydedilsin mi diye sorması için
         {
             anaMenu.check = 0;
         }
 
-        private void comboBox2_DropDownClosed(object sender, EventArgs e)       //kart bilgileri otomatik doldurulduktan sonra değişiklik yapılırsa tekrar kaydedilsin mi diye sorması için
+        private void cmbSktYil_DropDownClosed(object sender, EventArgs e)       //kart bilgileri otomatik doldurulduktan sonra değişiklik yapılırsa tekrar kaydedilsin mi diye sorması için
         {
             anaMenu.check = 0;
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void picService_Click(object sender, EventArgs e)
         {
-            if (label10.Text == "invalid")
+            if (lblKartCheck.Text == "invalid")
             { MessageBox.Show("Girmiş olduğunuz kart numarası geçersizdir. Lütfen kontrol ediniz.", "Uyarı"); }
         }
     }

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(odeme));
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
+            lblKartNo = new Label();
+            lblSkt = new Label();
+            lblCvv = new Label();
             txtKartNo = new TextBox();
             cmbSktAy = new ComboBox();
             cmbSktYil = new ComboBox();
@@ -50,8 +50,8 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
+            lblKartCvv = new Label();
+            lblKartCheck = new Label();
             picService = new PictureBox();
             picOdemeLogo = new PictureBox();
             label11 = new Label();
@@ -66,35 +66,35 @@
             ((System.ComponentModel.ISupportInitialize)picOdemeLogo).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // lblKartNo
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(53, 445);
-            label1.Name = "label1";
-            label1.Size = new Size(100, 27);
-            label1.TabIndex = 0;
-            label1.Text = "Kart No:";
+            lblKartNo.AutoSize = true;
+            lblKartNo.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblKartNo.Location = new Point(53, 445);
+            lblKartNo.Name = "lblKartNo";
+            lblKartNo.Size = new Size(100, 27);
+            lblKartNo.TabIndex = 0;
+            lblKartNo.Text = "Kart No:";
             // 
-            // label2
+            // lblSkt
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(71, 540);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 27);
-            label2.TabIndex = 1;
-            label2.Text = "SKT:";
+            lblSkt.AutoSize = true;
+            lblSkt.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSkt.Location = new Point(71, 540);
+            lblSkt.Name = "lblSkt";
+            lblSkt.Size = new Size(62, 27);
+            lblSkt.TabIndex = 1;
+            lblSkt.Text = "SKT:";
             // 
-            // label3
+            // lblCvv
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(67, 639);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 27);
-            label3.TabIndex = 2;
-            label3.Text = "CVV:";
+            lblCvv.AutoSize = true;
+            lblCvv.Font = new Font("Arial", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCvv.Location = new Point(67, 639);
+            lblCvv.Name = "lblCvv";
+            lblCvv.Size = new Size(65, 27);
+            lblCvv.TabIndex = 2;
+            lblCvv.Text = "CVV:";
             // 
             // txtKartNo
             // 
@@ -104,8 +104,8 @@
             txtKartNo.Name = "txtKartNo";
             txtKartNo.Size = new Size(171, 27);
             txtKartNo.TabIndex = 3;
-            txtKartNo.TextChanged += textBox1_TextChanged;
-            txtKartNo.KeyPress += textBox1_KeyPress;
+            txtKartNo.TextChanged += txtKartNo_TextChanged;
+            txtKartNo.KeyPress += txtKartNo_KeyPress;
             // 
             // cmbSktAy
             // 
@@ -118,8 +118,8 @@
             cmbSktAy.Name = "cmbSktAy";
             cmbSktAy.Size = new Size(57, 28);
             cmbSktAy.TabIndex = 4;
-            cmbSktAy.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            cmbSktAy.DropDownClosed += comboBox1_DropDownClosed;
+            cmbSktAy.SelectedIndexChanged += cmbSktAy_SelectedIndexChanged;
+            cmbSktAy.DropDownClosed += cmbSktAy_DropDownClosed;
             // 
             // cmbSktYil
             // 
@@ -132,8 +132,8 @@
             cmbSktYil.Name = "cmbSktYil";
             cmbSktYil.Size = new Size(57, 28);
             cmbSktYil.TabIndex = 5;
-            cmbSktYil.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
-            cmbSktYil.DropDownClosed += comboBox2_DropDownClosed;
+            cmbSktYil.SelectedIndexChanged += cmbSktYil_SelectedIndexChanged;
+            cmbSktYil.DropDownClosed += cmbSktYil_DropDownClosed;
             // 
             // label4
             // 
@@ -154,8 +154,8 @@
             txtCvv.Name = "txtCvv";
             txtCvv.Size = new Size(57, 27);
             txtCvv.TabIndex = 7;
-            txtCvv.TextChanged += textBox2_TextChanged;
-            txtCvv.KeyPress += textBox2_KeyPress;
+            txtCvv.TextChanged += txtCvv_TextChanged;
+            txtCvv.KeyPress += txtCvv_KeyPress;
             // 
             // txtSms
             // 
@@ -167,7 +167,7 @@
             txtSms.Size = new Size(57, 27);
             txtSms.TabIndex = 8;
             txtSms.Text = "SMS";
-            txtSms.KeyPress += textBox3_KeyPress;
+            txtSms.KeyPress += txtSms_KeyPress;
             // 
             // btnOnayla
             // 
@@ -204,7 +204,7 @@
             picKartHelp.SizeMode = PictureBoxSizeMode.StretchImage;
             picKartHelp.TabIndex = 11;
             picKartHelp.TabStop = false;
-            picKartHelp.Click += pictureBox1_Click;
+            picKartHelp.Click += picKartHelp_Click;
             // 
             // picSktHelp
             // 
@@ -216,7 +216,7 @@
             picSktHelp.SizeMode = PictureBoxSizeMode.StretchImage;
             picSktHelp.TabIndex = 12;
             picSktHelp.TabStop = false;
-            picSktHelp.Click += pictureBox2_Click;
+            picSktHelp.Click += picSktHelp_Click;
             // 
             // picSmsHelp
             // 
@@ -228,7 +228,7 @@
             picSmsHelp.SizeMode = PictureBoxSizeMode.StretchImage;
             picSmsHelp.TabIndex = 13;
             picSmsHelp.TabStop = false;
-            picSmsHelp.Click += pictureBox3_Click;
+            picSmsHelp.Click += picSmsHelp_Click;
             // 
             // picCvvHelp
             // 
@@ -240,7 +240,7 @@
             picCvvHelp.SizeMode = PictureBoxSizeMode.StretchImage;
             picCvvHelp.TabIndex = 14;
             picCvvHelp.TabStop = false;
-            picCvvHelp.Click += pictureBox4_Click;
+            picCvvHelp.Click += picCvvHelp_Click;
             // 
             // kart
             // 
@@ -301,23 +301,23 @@
             label8.Size = new Size(0, 20);
             label8.TabIndex = 21;
             // 
-            // label9
+            // lblKartCvv
             // 
-            label9.BackColor = Color.White;
-            label9.Location = new Point(349, 272);
-            label9.Name = "label9";
-            label9.Size = new Size(33, 20);
-            label9.TabIndex = 22;
+            lblKartCvv.BackColor = Color.White;
+            lblKartCvv.Location = new Point(349, 272);
+            lblKartCvv.Name = "lblKartCvv";
+            lblKartCvv.Size = new Size(33, 20);
+            lblKartCvv.TabIndex = 22;
             // 
-            // label10
+            // lblKartCheck
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(302, 331);
-            label10.Name = "label10";
-            label10.Size = new Size(58, 20);
-            label10.TabIndex = 23;
-            label10.Text = "label10";
-            label10.TextChanged += label10_TextChanged;
+            lblKartCheck.AutoSize = true;
+            lblKartCheck.Location = new Point(302, 331);
+            lblKartCheck.Name = "lblKartCheck";
+            lblKartCheck.Size = new Size(58, 20);
+            lblKartCheck.TabIndex = 23;
+            lblKartCheck.Text = "label10";
+            lblKartCheck.TextChanged += lblKartCheck_TextChanged;
             // 
             // picService
             // 
@@ -329,6 +329,7 @@
             picService.SizeMode = PictureBoxSizeMode.StretchImage;
             picService.TabIndex = 24;
             picService.TabStop = false;
+            picService.Click += picService_Click;
             // 
             // picOdemeLogo
             // 
@@ -384,8 +385,8 @@
             Controls.Add(label11);
             Controls.Add(picOdemeLogo);
             Controls.Add(picService);
-            Controls.Add(label10);
-            Controls.Add(label9);
+            Controls.Add(lblKartCheck);
+            Controls.Add(lblKartCvv);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -403,15 +404,15 @@
             Controls.Add(cmbSktYil);
             Controls.Add(cmbSktAy);
             Controls.Add(txtKartNo);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblCvv);
+            Controls.Add(lblSkt);
+            Controls.Add(lblKartNo);
             Controls.Add(kart);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "odeme";
             Text = "Ödeme";
-            Load += Form2_Load;
+            Load += odeme_Load;
             ((System.ComponentModel.ISupportInitialize)picKartHelp).EndInit();
             ((System.ComponentModel.ISupportInitialize)picSktHelp).EndInit();
             ((System.ComponentModel.ISupportInitialize)picSmsHelp).EndInit();
@@ -425,9 +426,9 @@
 
         #endregion
 
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private Label lblKartNo;
+        private Label lblSkt;
+        private Label lblCvv;
         private TextBox txtKartNo;
         private ComboBox cmbSktAy;
         private ComboBox cmbSktYil;
@@ -446,8 +447,8 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private Label label9;
-        private Label label10;
+        private Label lblKartCvv;
+        private Label lblKartCheck;
         private PictureBox picService;
         private PictureBox picOdemeLogo;
         private Label label11;

@@ -1,9 +1,3 @@
-//10.06.24 Form isimlerini güncelledim.
-//22.09.24 SMS doğrulama mesajını güncelledim. Ana menü form ismini güncelledim. 
-//09.10.24 İletişim formundaki harita ve web sitesi yönlendirmelerini yaptım.
-//14.11.24 İndirim kodları eklendi.
-//15.11.24 yeni indirim kodu eklendi ve listboxa indirimli fiyat yansıtıldı.
-//16.11.24 Önceden kart bilgisi kaydedilmişse ama yeni siparişte farklı isim girilmişse kart bilgilerinin oto doldurulmaması sağlandı.
 using System.Diagnostics.Eventing.Reader;
 
 namespace C____Pizza_Sipariş_Uygulaması
@@ -16,8 +10,8 @@ namespace C____Pizza_Sipariş_Uygulaması
         }
         public static string isim; //ödeme formunda kartın üzerinde isim yazması için
         public static int a = 1;   //temassız teslimat checkbox
-        public static int cvvno, sktay, sktgun, check;  //kart kaydedilirse otomatik doldurulan bilgiler
-        public static long kartno; //kart kaydedilirse otomatik doldurulan kart numarası
+        public static int cvvNo, sktAy, sktGun, check;  //kart kaydedilirse otomatik doldurulan bilgiler
+        public static long kartNo; //kart kaydedilirse otomatik doldurulan kart numarası
         public static int fiyat = 0;      //fiyat 
         public int b = 0;          //combobox sayacı
         public int c1 = 1;         //comboboxlar
@@ -34,12 +28,12 @@ namespace C____Pizza_Sipariş_Uygulaması
         public int c12 = 1;
         public int d = 0;          //ödeme türü checkbox
         public int f = 0;           //indirim butonu check
-        public static int eskifiyat = 0;        //indirim kodu girilirse kaçtan düştüğünü gösteren değişken
+        public static int eskiFiyat = 0;        //indirim kodu girilirse kaçtan düştüğünü gösteren değişken
         public string eskiisim;
 
         public void temizle()  //temizle butonu ile, menustripteki temizle seçeneği ile, contextmenustripteki seçimleri temizle seçeneği ile, 3 kez yanlış sms kodu girildikten sonra ve sipariş oluşturulduktan sonra yapılan temizlik.
         {
-            listBox1.Items.Clear();
+            lbListe.Items.Clear();
             cmbHamur.SelectedIndex = -1;
             cmbSucuk.SelectedIndex = -1;
             cmbMantar.SelectedIndex = -1;
@@ -56,7 +50,7 @@ namespace C____Pizza_Sipariş_Uygulaması
             txtTelefon.Text = string.Empty;
             txtAdres.Text = string.Empty;
             cbTemassız.Checked = false;
-            cbKapıda.Checked = false;
+            cbKapida.Checked = false;
             btnKaydet.Visible = false;
             btnSiparis.Visible = false;
             gbTeslimat.Visible = false;
@@ -64,7 +58,7 @@ namespace C____Pizza_Sipariş_Uygulaması
             btnIndirimKodu.Visible = true;
             btnIndirimKodu.Text = ("İndirim Kodum Var");
             fiyat = 0;
-            eskifiyat = 0;
+            eskiFiyat = 0;
             a = 1;
             b = 0;
             d = 0;
@@ -86,27 +80,27 @@ namespace C____Pizza_Sipariş_Uygulaması
         private void button1_Click(object sender, EventArgs e)  //kaydet butonu
         {
             fiyat = 0;
-            listBox1.Items.Clear();
-            listBox1.Items.Add("                 SİPARİŞ BİLGİLERİ");       //bu başlıklar her cihazda simetrik olmayabilir kontrol edilmesi lazım
-            listBox1.Items.Add("");
-            listBox1.Items.Add("-----------------PİZZA-------------------");
-            listBox1.Items.Add("º " + cmbBoyut.Text);
-            listBox1.Items.Add("º " + cmbHamur.Text);
-            listBox1.Items.Add("º " + cmbSucuk.Text);
-            listBox1.Items.Add("º " + cmbMantar.Text);
-            listBox1.Items.Add("º " + cmbPeynir.Text);
-            listBox1.Items.Add("º " + cmbZeytin.Text);
-            listBox1.Items.Add(" ");
-            listBox1.Items.Add("-----------PROMOSYONLAR------------");
-            listBox1.Items.Add("º " + cmbTatlı.Text);
-            listBox1.Items.Add("º " + cmbCıtır.Text);
-            listBox1.Items.Add("º " + cmbSos1.Text);
-            listBox1.Items.Add("º " + cmbSos2.Text);
-            listBox1.Items.Add(" ");
-            listBox1.Items.Add("--------------İÇECEKLER-----------------");
-            listBox1.Items.Add("º " + cmbİcecek1.Text);
-            listBox1.Items.Add("º " + cmbİcecek2.Text);
-            listBox1.Items.Add("\n");
+            lbListe.Items.Clear();
+            lbListe.Items.Add("                 SİPARİŞ BİLGİLERİ");       //bu başlıklar her cihazda simetrik olmayabilir kontrol edilmesi lazım
+            lbListe.Items.Add("");
+            lbListe.Items.Add("-----------------PİZZA-------------------");
+            lbListe.Items.Add("º " + cmbBoyut.Text);
+            lbListe.Items.Add("º " + cmbHamur.Text);
+            lbListe.Items.Add("º " + cmbSucuk.Text);
+            lbListe.Items.Add("º " + cmbMantar.Text);
+            lbListe.Items.Add("º " + cmbPeynir.Text);
+            lbListe.Items.Add("º " + cmbZeytin.Text);
+            lbListe.Items.Add(" ");
+            lbListe.Items.Add("-----------PROMOSYONLAR------------");
+            lbListe.Items.Add("º " + cmbTatlı.Text);
+            lbListe.Items.Add("º " + cmbCıtır.Text);
+            lbListe.Items.Add("º " + cmbSos1.Text);
+            lbListe.Items.Add("º " + cmbSos2.Text);
+            lbListe.Items.Add(" ");
+            lbListe.Items.Add("--------------İÇECEKLER-----------------");
+            lbListe.Items.Add("º " + cmbİcecek1.Text);
+            lbListe.Items.Add("º " + cmbİcecek2.Text);
+            lbListe.Items.Add("\n");
             gbTeslimat.Visible = true;
             btnSiparis.Visible = true;
             txtIndirimKodu.Visible = false;
@@ -183,12 +177,12 @@ namespace C____Pizza_Sipariş_Uygulaması
             else if (cmbİcecek2.SelectedIndex == 13) { fiyat += 10; }                           //250 mL zafer gazoz sade
             else if (cmbİcecek1.SelectedIndex == 14) { fiyat += 10; }                            //250 mL zafer gazoz portakallı
             else if (cmbİcecek1.SelectedIndex == 15) { fiyat += 2; }                             //500 mL su
-            if (f == 0) { listBox1.Items.Add("TOPLAM= " + fiyat + " TL"); }
+            if (f == 0) { lbListe.Items.Add("TOPLAM= " + fiyat + " TL"); }
             else 
             {
-                eskifiyat = fiyat;
+                eskiFiyat = fiyat;
                 fiyat = Convert.ToInt16((fiyat * 85)/100);
-                listBox1.Items.Add("TOPLAM= " + eskifiyat + " INDIRIMLI: " + fiyat + " TL"); }
+                lbListe.Items.Add("TOPLAM= " + eskiFiyat + " INDIRIMLI: " + fiyat + " TL"); }
             }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)       //temassız teslimat işaretlendiğinde
@@ -365,19 +359,19 @@ namespace C____Pizza_Sipariş_Uygulaması
 
         private void Form1_Click(object sender, EventArgs e)
         {
-            if (odeme.zzz == 1)     //form1'e tıklandığında eğer form2de sipariş oluşturulduysa
+            if (odeme.formYenile == 1)     //form1'e tıklandığında eğer form2de sipariş oluşturulduysa
             {
                 temizle();
-                odeme.zzz = 0;
+                odeme.formYenile = 0;
             }
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (odeme.zzz == 1)     //form1'de mouse hareket ettiğinde eğer form2de sipariş oluşturulduysa
+            if (odeme.formYenile == 1)     //form1'de mouse hareket ettiğinde eğer form2de sipariş oluşturulduysa
             {
                 temizle();
-                odeme.zzz = 0;
+                odeme.formYenile = 0;
             }
         }
 
@@ -401,6 +395,10 @@ namespace C____Pizza_Sipariş_Uygulaması
                 "23 Ocak 2024 - 1.4.2\nKart kaydetme özelliğinin hataları giderildi. Menustripe seçenekler menüsü, altına çıkış yapma ve temizleme fonksiyonları eklendi. Yorum satırları düzenlendi.\n\n" +
                 "27 Ocak 2024 - 1.4.3\nContextmenustrip özelliği ve altına temizleme fonksiyonu eklendi.\n\n" +
                 "22 Nisan 2024 - 1.4.4\nKullanım koşulları ve gizlilik sözleşmesi eklendi. Hatalar giderildi.\n\n" +
+                "10 Haziran 2024 - 1.4.4.1\nForm isimleri güncellendi.\n\n"+
+                "22 Eylül 2024 - 1.4.4.2\nSMS doğrulama mesajı güncellendi. Ana menü form ismi güncellendi.\n\n"+
+                "9 Ekim 2024 - 1.4.4.3\nİletişim formundaki harita ve web sütesi yönlendirmeleri yapıldı.\n\n"+
+                "14 Kasım 2024 - 1.4.5\nİndirim kodları eklendi\n\n"+
                 "Güncel Sürüm: 1.4.4", "Güncelleme Notları");
         }
 
@@ -439,7 +437,7 @@ namespace C____Pizza_Sipariş_Uygulaması
             }
             else                    //İlk kez tıklanmıyorsa
             {
-                if (txtIndirimKodu.Text == ("EMREDIKBAS15"))                  //emre indirim kodu
+                if (txtIndirimKodu.Text == ("EMRE15"))                  //emre indirim kodu
                 {
                     MessageBox.Show(txtIndirimKodu.Text + "EMREDIKBAS15 koduna özel %15 indiriminiz tanımlanmıştır.", "Kod Başarılı");
                     btnIndirimKodu.Visible = false;

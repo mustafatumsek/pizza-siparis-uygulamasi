@@ -62,7 +62,7 @@
             picKonum.SizeMode = PictureBoxSizeMode.StretchImage;
             picKonum.TabIndex = 0;
             picKonum.TabStop = false;
-            picKonum.Click += pictureBox1_Click;
+            picKonum.Click += picKonum_Click;
             // 
             // lblAdresBaslik
             // 
@@ -83,7 +83,7 @@
             lblAdres.Size = new Size(380, 18);
             lblAdres.TabIndex = 2;
             lblAdres.Text = "Hoşnudiye, Nayman Sk. No:4, 26130 Tepebaşı/Eskişehir";
-            lblAdres.Click += label2_Click;
+            lblAdres.Click += lblAdres_Click;
             // 
             // lblTelefon
             // 
@@ -94,7 +94,7 @@
             lblTelefon.Size = new Size(118, 18);
             lblTelefon.TabIndex = 4;
             lblTelefon.Text = "0(222) 500 23 26";
-            lblTelefon.Click += label3_Click;
+            lblTelefon.Click += lblTelefon_Click;
             // 
             // lblTelefonBaslik
             // 
@@ -143,7 +143,7 @@
             txtAd.Name = "txtAd";
             txtAd.Size = new Size(154, 27);
             txtAd.TabIndex = 11;
-            txtAd.KeyPress += textBox1_KeyPress;
+            txtAd.KeyPress += txtAd_KeyPress;
             // 
             // txtSoyad
             // 
@@ -152,7 +152,7 @@
             txtSoyad.Name = "txtSoyad";
             txtSoyad.Size = new Size(154, 27);
             txtSoyad.TabIndex = 13;
-            txtSoyad.KeyPress += textBox2_KeyPress_1;
+            txtSoyad.KeyPress += txtSoyad_KeyPress;
             // 
             // lblSoyadiniz
             // 
@@ -210,7 +210,7 @@
             btnGonder.TabIndex = 20;
             btnGonder.Text = "Gönder";
             btnGonder.UseVisualStyleBackColor = true;
-            btnGonder.Click += button1_Click;
+            btnGonder.Click += btnGonder_Click;
             // 
             // label12
             // 
@@ -248,7 +248,7 @@
             lblWeb.TabIndex = 24;
             lblWeb.TabStop = true;
             lblWeb.Text = "www.bavyerapizza.com";
-            lblWeb.LinkClicked += linkLabel1_LinkClicked;
+            lblWeb.LinkClicked += lblWeb_LinkClicked;
             // 
             // iletisim
             // 
