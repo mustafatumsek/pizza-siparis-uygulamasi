@@ -24,7 +24,9 @@ Projeye 2023 yılının eylül ayında başladım. Son olarak 2024 yılının ar
  
  22 Nisan 2024 - Kullanım koşulları ve gizlilik sözleşmesi eklendi. Hatalar giderildi. 
   
-  10 Haziran 2024 - Form isimleri güncellendi. 22 Eylül 2024 - SMS doğrulama mesajı güncellendi. Ana menü form ismi güncellendi. 
+  10 Haziran 2024 - Form isimleri güncellendi.  
+  
+  22 Eylül 2024 - SMS doğrulama mesajı güncellendi. Ana menü form ismi güncellendi.   
    
    09 Ekim 2024 - İletişim formundaki harita ve web sitesi yönlendirmeleri yapıldı.  
    
