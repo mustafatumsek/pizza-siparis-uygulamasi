@@ -12,7 +12,8 @@ Projeye 2023 yılının eylül ayında başladım. Son olarak 2024 yılının ar
 ![image](https://github.com/user-attachments/assets/29121fe9-d4d8-44b7-b57f-453cc823ecef)
 ![image](https://github.com/user-attachments/assets/471b40de-1f8a-44c5-8e16-3dc0dfc81ac6)
 
-
+## 🚀 About Me
+I’m a 3rd-year Management Information Systems student at Pamukkale University. Passionate about learning and self-improvement, I actively participate in events and contribute to various projects. Continuously seeking opportunities to grow my skills and apply them to real-world challenges.  
 
 ## 🔗 Contact Me
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mustafatumsek/)
